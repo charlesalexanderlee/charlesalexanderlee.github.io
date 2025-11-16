@@ -17,26 +17,29 @@
             min-height: 100vh;
         }
         .container {
-            max-width: 700px;
+            max-width: 90%;
+            width: 600px;
             text-align: center;
             padding: 20px;
+            box-sizing: border-box;
         }
         h1 {
+            font-family: Consolas, monospace;
             font-size: 3rem;
             margin-bottom: 10px;
-            font-family: Consolas, monospace;
             color: #00ff41;
+            word-wrap: break-word;
         }
         p.bio {
             font-size: 1.1rem;
             margin: 10px 0 25px 0;
             line-height: 1.5;
-            font-family: Consolas, monospace;
             color: #ffffff;
         }
         a {
             color: #7ab6ff;
             text-decoration: none;
+            font-family: Consolas, monospace;
         }
         a:hover {
             text-decoration: underline;
@@ -44,30 +47,70 @@
         .links {
             margin: 20px 0;
             font-size: 1.1rem;
+            font-family: Consolas, monospace;
         }
         blockquote {
             margin-top: 30px;
             font-style: italic;
             color: #cccccc;
+            padding: 0 10px;
+            word-wrap: break-word;
+            font-family: Consolas, monospace;
         }
-    @media (max-width: 480px) {
-        h1 {
-            font-size: 2.2rem;
-            white-space: nowrap;
+
+        /* MOBILE FIX */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.2rem;
+                white-space: normal;
+            }
+            p.bio {
+                font-size: 1rem;
+                white-space: normal;
+                line-height: 1.4;
+            }
+            p.bio .bio-line1 {
+                white-space: nowrap;
+            }
+            .links p {
+                font-size: 1rem;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+                white-space: normal;
+            }
+            blockquote {
+                padding: 0 2px;
+                font-size: 0.9rem;
+                white-space: normal;
+            }
+            svg {
+                width: 200px !important;
+            }
+            span[style*="padding-left"] {
+                padding-left: 0 !important;
+            }
         }
-        p.bio {
-            font-size: 0.95rem;
-            white-space: nowrap;
+            p.bio {
+                font-size: 1rem;
+                white-space: normal;
+            }
+            .links p {
+                font-size: 1rem;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+                white-space: normal;
+            }
+            svg {
+                width: 200px !important;
+            }
+            span[style*="padding-left"] {
+                padding-left: 0 !important; /* center email */
+            }
         }
-        .links p {
-            font-size: 0.95rem;
-            white-space: nowrap;
-        }
-        blockquote {
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
-    }
     </style>
 </head>
 <body>
@@ -75,8 +118,8 @@
         <h1><span style="color:#ffffff;">&lambda;</span> Alexander Lee</h1>
 
         <p class="bio">
-            Semigroups in cryptography researcher<br />
-            Mathematics Undergraduate, George Mason University
+            <span class="bio-line1">Semigroups in cryptography researcher</span><br />
+            Mathematics Undergraduate,<br />George Mason University
         </p>
 
         <div class="links">
