@@ -118,8 +118,7 @@
         <h1><span style="color:#ffffff;">&lambda;</span> Alexander Lee</h1>
 
         <p class="bio">
-            <span class="bio-line1">Semigroups in cryptography researcher</span><br />
-            Mathematics Undergraduate,<br />George Mason University
+            Mathematics @ George Mason University
         </p>
 
         <div class="links">
@@ -129,12 +128,20 @@
                 <a href="https://pastebin.com/raw/kPnf7sfp" target="_blank">PGP Key</a>
             </p>
             <p style="margin-top:15px; display:flex; justify-content:center;">
-                <span style="display:inline-flex; padding-left:90px;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="260" height="20" role="img" aria-label="charles@alexanderlee.xyz">
-                        <text x="0" y="14" font-family="Consolas, monospace" font-size="14" fill="#7ab6ff">charles@alexanderlee.xyz</text>
-                    </svg>
-                </span>
+                <span id="email" style="font-family:Consolas,monospace; font-size:14px; color:#7ab6ff; cursor:pointer;"></span>
             </p>
+            <script>
+                (function() {
+                    var u = 'charles';
+                    var d = 'alexanderlee' + '\x2e' + 'xyz';
+                    var e = u + '\x40' + d;
+                    var el = document.getElementById('email');
+                    el.textContent = e;
+                    el.addEventListener('click', function() {
+                        window.location.href = 'mai' + 'lto:' + e;
+                    });
+                })();
+            </script>
         </div>
 
         <blockquote>
